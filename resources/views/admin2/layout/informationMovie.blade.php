@@ -2,102 +2,76 @@
 @extends('admin2.layout.index')
 
 @section('content')
-    <div class="about-section">
-        <h1> Information of Movie</h1>
-        <p>Be careful when editing or removing information from movies!!</p>
-    </div>
 
-    <h2 style="text-align:center">Team 2</h2>
-    <div class="row">
-        <div class="column">
-            <div class="card">
-                <img src="#" alt="" style="width:100%">
-                <div class="container">
-                    <h2>Movie name: </h2>
-                    <p class="title">ID: </p>
-                    <p>Directors:</p>
-                    <p>Actors: </p>
-                    <p>Genre: </p>
-                    <p>Premiere: </p>
-                    <p>Duration: </p>
-                    <p>Language: </p>
-                    <p>Description: </p>
-                    <p><button class="button">Edit</button></p>
-                    <p><button class="button">Delete</button></p>
-                </div>
-            </div>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Movie Management</h4>
+        <a href="/addMovie"><button class="btn btn-gradient-primary mr-2">+ Add a Movie</button></a>
+            <br> </br>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> Movie Name </th>
+                        <th> Description </th>
+                        <th> Directors </th>
+                        <th> Actors </th>
+                        <th> Genre </th>
+                        <th> Premiere </th>
+                        <th> Duration </th>
+                        <th> Language </th>
+                        <th> Movie Banner </th>
+                        <th> Action </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> Name </td>
+                        <td> Description </td>
+                        <td> Directors </td>
+                        <td> tui thu viet o day sieu dai cho cau xem nay ^^ </td>
+                        <td> Genre </td>
+                        <td> Release Date </td>
+                        <td> 125m </td>
+                        <td> English </td>
+                        <td> Banner here </td>
+                        <td> 
+                            <a href="/editMovie"><button type="submit" class="btn btn-gradient-primary mr-2">Edit</button></a>
+                            <br></br>
+                            <button class="btn btn-light">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- <tr class="table-warning">
+                        <td> 2 </td>
+                        <td> Messsy Adam </td>
+                        <td> Flash </td>
+                        <td> $245.30 </td>
+                        <td> July 1, 2015 </td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td> 3 </td>
+                        <td> John Richards </td>
+                        <td> Premeire </td>
+                        <td> $138.00 </td>
+                        <td> Apr 12, 2015 </td>
+                    </tr>
+                    <tr class="table-success">
+                        <td> 4 </td>
+                        <td> Peter Meggik </td>
+                        <td> After effects </td>
+                        <td> $ 77.99 </td>
+                        <td> May 15, 2015 </td>
+                    </tr>
+                    <tr class="table-primary">
+                        <td> 5 </td>
+                        <td> Edward </td>
+                        <td> Illustrator </td>
+                        <td> $ 160.25 </td>
+                        <td> May 03, 2015 </td>
+                    </tr> -->
+                    </tbody>
+                </table>
         </div>
-
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0;
-        }
-
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        .column {
-            float: left;
-            height: auto;
-            width: 33.3%;
-            margin-bottom: 16px;
-            padding: 0 8px;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 8px;
-        }
-
-        .about-section {
-            padding: 50px;
-            text-align: center;
-            background-color: #474e5d;
-            color: white;
-        }
-
-        .container {
-            padding: 0 16px;
-        }
-
-        .container::after, .row::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        .title {
-            color: grey;
-        }
-
-        .button {
-            border: none;
-            outline: 0;
-            display: inline;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 45%;
-        }
-
-        .button:hover {
-            background-color: #555;
-        }
-
-        @media screen and (max-width: 650px) {
-            .column {
-                width: 100%;
-                display: block;
-            }
-        }
-    </style>
+    </div>
 @endsection
